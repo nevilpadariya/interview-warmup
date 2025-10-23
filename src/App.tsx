@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { HomePage } from '@/pages/HomePage';
 import { PracticePage } from '@/pages/PracticePage';
 import { ResultsPage } from '@/pages/ResultsPage';
+import { RoleSelectionPage } from '@/pages/RoleSelectionPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/role" element={<RoleSelectionPage />} />
             <Route path="/practice/:category" element={<PracticePage />} />
             <Route path="/results" element={<ResultsPage />} />
           </Routes>
