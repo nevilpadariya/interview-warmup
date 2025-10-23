@@ -9,22 +9,22 @@ export const QuestionDisplay: React.FC<QuestionDisplayProps> = ({ question, cate
   const getCategoryColor = () => {
     switch (category) {
       case 'general':
-        return 'bg-blue-100 border-blue-300';
+        return 'bg-google-blue-100 border-google-blue-300';
       case 'technical':
-        return 'bg-green-100 border-green-300';
+        return 'bg-google-green-100 border-google-green-300';
       case 'behavioral':
-        return 'bg-purple-100 border-purple-300';
+        return 'bg-google-yellow-100 border-google-yellow-300';
       default:
-        return 'bg-gray-100 border-gray-300';
+        return 'bg-surface-2 border-surface-4';
     }
   };
 
   return (
-    <div className={`${getCategoryColor()} border-2 rounded-2xl p-8 shadow-lg`}>
-      <div className="flex items-start space-x-4">
-        <MessageSquare className="text-gray-700 flex-shrink-0 mt-1" size={28} />
+    <div className={`${getCategoryColor()} border-2 rounded-google-xl p-google-xl shadow-google-2`}>
+      <div className="flex items-start space-x-google-md">
+        <MessageSquare className="text-text-secondary flex-shrink-0 mt-1" size={28} />
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed">
+          <h2 className="text-google-headline-1 font-google-display text-text-primary leading-relaxed">
             {question}
           </h2>
         </div>

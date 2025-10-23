@@ -97,30 +97,30 @@ export const PracticePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-surface-1">
+      <div className="max-w-5xl mx-auto px-google-md sm:px-google-lg lg:px-google-xl py-google-3xl">
         {/* Category Badge */}
-        <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-white rounded-full text-sm font-semibold text-gray-700 shadow-sm">
+        <div className="mb-google-lg">
+          <span className="inline-block px-google-md py-google-sm bg-white rounded-full text-google-body-2 font-medium text-text-secondary shadow-google-1">
             {category.charAt(0).toUpperCase() + category.slice(1)} Question
           </span>
         </div>
 
         {/* Question */}
-        <div className="mb-8">
+        <div className="mb-google-xl">
           <QuestionDisplay question={currentQuestion} category={category} />
         </div>
 
         {/* Preparation Timer */}
         {showPrepTimer && (
-          <div className="mb-8">
+          <div className="mb-google-xl">
             <PrepTimer onComplete={handlePrepComplete} />
           </div>
         )}
 
         {/* Recording Controls */}
         {!showPrepTimer && (
-          <div className="mb-8">
+          <div className="mb-google-xl">
             <RecordingControls
               isRecording={isRecording}
               recordingTime={formatTime(recordingTime)}
@@ -135,24 +135,24 @@ export const PracticePage = () => {
 
         {/* Audio Player */}
         {recordedAudio && !isRecording && (
-          <div className="mb-8">
+          <div className="mb-google-xl">
             <AudioPlayer audioUrl={recordedAudio} />
           </div>
         )}
 
         {/* Action Buttons */}
         {recordedAudio && !isRecording && (
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-google-md mb-google-xl">
             <button
               onClick={handleTryAgain}
-              className="flex items-center justify-center space-x-2 bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold border-2 border-gray-300 hover:bg-gray-50 transition-colors"
+              className="google-button-secondary"
             >
               <RotateCcw size={20} />
               <span>Try Again</span>
             </button>
             <button
               onClick={handleNextQuestion}
-              className="flex items-center justify-center space-x-2 bg-google-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg flex-1"
+              className="google-button-primary flex-1"
             >
               <span>Next Question</span>
               <ArrowRight size={20} />

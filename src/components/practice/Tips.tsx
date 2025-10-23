@@ -36,18 +36,18 @@ export const Tips: React.FC<TipsProps> = ({ category }) => {
   const tips = getTips();
 
   return (
-    <div className="bg-indigo-50 border-2 border-indigo-300 rounded-2xl p-6 shadow-md">
-      <div className="flex items-center space-x-3 mb-4">
-        <Lightbulb className="text-indigo-600" size={24} />
-        <h3 className="text-xl font-semibold text-gray-900">
+    <div className="bg-google-blue-50 border-2 border-google-blue-300 rounded-google-xl p-google-xl shadow-google-2">
+      <div className="flex items-center space-x-google-md mb-google-md">
+        <Lightbulb className="text-google-blue-600" size={24} />
+        <h3 className="text-google-title-1 font-medium text-text-primary">
           Tips for {category.charAt(0).toUpperCase() + category.slice(1)} Questions
         </h3>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-google-sm">
         {tips.map((tip, index) => (
-          <li key={index} className="flex items-start space-x-2">
-            <span className="text-indigo-600 font-bold flex-shrink-0">•</span>
-            <span className="text-gray-700">{tip}</span>
+          <li key={index} className="flex items-start space-x-google-sm">
+            <span className="text-google-blue-500 font-medium flex-shrink-0">•</span>
+            <span className="text-google-body-2 text-text-secondary">{tip}</span>
           </li>
         ))}
       </ul>

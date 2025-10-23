@@ -59,20 +59,20 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl }) => {
   };
 
   return (
-    <div className="bg-green-50 border-2 border-green-300 rounded-2xl p-6 shadow-md">
-      <div className="flex items-center space-x-4 mb-4">
-        <Volume2 className="text-green-600" size={24} />
-        <h3 className="text-xl font-semibold text-gray-900">
+    <div className="bg-google-green-50 border-2 border-google-green-300 rounded-google-xl p-google-xl shadow-google-2">
+      <div className="flex items-center space-x-google-md mb-google-md">
+        <Volume2 className="text-google-green-600" size={24} />
+        <h3 className="text-google-title-1 font-medium text-text-primary">
           Your Recording
         </h3>
       </div>
 
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-google-md">
         <button
           onClick={togglePlayPause}
-          className="flex-shrink-0 bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors shadow-md"
+          className="flex-shrink-0 bg-google-green-500 text-white p-google-md rounded-full hover:bg-google-green-600 transition-colors shadow-google-1"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           {isPlaying ? <Pause size={24} /> : <Play size={24} />}
@@ -85,10 +85,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioUrl }) => {
             max={duration || 0}
             value={currentTime}
             onChange={handleSeek}
-            className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-500"
+            className="w-full h-2 bg-google-green-200 rounded-lg appearance-none cursor-pointer accent-google-green-500"
             aria-label="Audio progress"
           />
-          <div className="flex justify-between text-sm text-gray-600 mt-1">
+          <div className="flex justify-between text-google-body-2 text-text-secondary mt-google-xs">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>

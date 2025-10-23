@@ -3,23 +3,23 @@ import { Home, BarChart3 } from 'lucide-react';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white shadow-google-1 border-b border-surface-4">
+      <div className="max-w-7xl mx-auto px-google-md sm:px-google-lg lg:px-google-xl">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <Link
             to="/"
-            className="flex items-center space-x-2 text-xl font-bold text-google-blue hover:text-blue-700 transition-colors"
+            className="flex items-center space-x-google-sm text-google-title-1 font-medium text-google-blue-500 hover:text-google-blue-600 transition-colors"
           >
             <span className="text-2xl">🎤</span>
             <span>Interview Warmup</span>
           </Link>
 
           {/* Navigation */}
-          <nav className="flex items-center space-x-4">
+          <nav className="flex items-center space-x-google-sm">
             <Link
               to="/"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              className="flex items-center space-x-google-sm px-google-md py-google-sm rounded-google-md text-google-body-1 text-text-secondary hover:bg-surface-2 hover:text-text-primary transition-colors"
               aria-label="Home"
             >
               <Home size={20} />
@@ -27,7 +27,7 @@ export const Header = () => {
             </Link>
             <Link
               to="/results"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              className="flex items-center space-x-google-sm px-google-md py-google-sm rounded-google-md text-google-body-1 text-text-secondary hover:bg-surface-2 hover:text-text-primary transition-colors"
               aria-label="Progress"
             >
               <BarChart3 size={20} />

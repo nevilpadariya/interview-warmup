@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&family=Google+Sans+Display:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Google Sans', 'Roboto', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light;
-  color: rgba(17, 24, 39, 0.87);
+  color: #202124;
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -28,10 +30,109 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #fafafa;
 }
 
 #root {
   width: 100%;
+}
+
+/* Google Material Design Base Styles */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Google Sans Display', 'Google Sans', 'Roboto', system-ui, sans-serif;
+    font-weight: 400;
+    color: #202124;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    letter-spacing: -0.025em;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.025em;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  
+  h6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #5F6368;
+  }
+  
+  button {
+    font-family: 'Google Sans', 'Roboto', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+  }
+}
+
+/* Google Material Design Components */
+@layer components {
+  .google-button {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .google-button-primary {
+    @apply google-button bg-google-blue-500 text-white hover:bg-google-blue-600 focus:ring-google-blue-500 shadow-google-1 hover:shadow-google-2;
+  }
+  
+  .google-button-secondary {
+    @apply google-button bg-surface-1 text-text-primary border border-surface-4 hover:bg-surface-2 focus:ring-google-blue-500 shadow-google-1 hover:shadow-google-2;
+  }
+  
+  .google-button-danger {
+    @apply google-button bg-google-red-500 text-white hover:bg-google-red-600 focus:ring-google-red-500 shadow-google-1 hover:shadow-google-2;
+  }
+  
+  .google-card {
+    @apply bg-white rounded-google-lg shadow-google-1 hover:shadow-google-2 transition-shadow duration-200;
+  }
+  
+  .google-card-elevated {
+    @apply bg-white rounded-google-lg shadow-google-2 hover:shadow-google-3 transition-shadow duration-200;
+  }
+  
+  .google-input {
+    @apply w-full px-4 py-3 border border-surface-4 rounded-google-md focus:outline-none focus:ring-2 focus:ring-google-blue-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .google-surface {
+    @apply bg-white rounded-google-lg shadow-google-1;
+  }
+  
+  .google-surface-elevated {
+    @apply bg-white rounded-google-lg shadow-google-2;
+  }
 }
 
 @layer utilities {
@@ -40,6 +141,22 @@ body {
   }
   .delay-150 {
     animation-delay: 150ms;
+  }
+  
+  .google-text-primary {
+    color: #202124;
+  }
+  
+  .google-text-secondary {
+    color: #5F6368;
+  }
+  
+  .google-text-disabled {
+    color: #9AA0A6;
+  }
+  
+  .google-text-inverse {
+    color: #FFFFFF;
   }
 }
 

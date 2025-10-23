@@ -20,23 +20,23 @@ export const RecordingControls: React.FC<RecordingControlsProps> = ({
   error,
 }) => {
   return (
-    <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-md">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+    <div className="google-card-elevated p-google-xl">
+      <h3 className="text-google-title-1 font-medium text-text-primary mb-google-md">
         Record Your Answer
       </h3>
 
       {error && (
-        <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-700 text-sm">{error}</p>
+        <div className="mb-google-md p-google-md bg-google-red-50 border border-google-red-200 rounded-google-md">
+          <p className="text-google-body-2 text-google-red-700">{error}</p>
         </div>
       )}
 
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-google-md">
           {!isRecording && !hasRecording && (
             <button
               onClick={onStart}
-              className="flex items-center space-x-2 bg-google-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+              className="google-button-primary"
               aria-label="Start recording"
             >
               <Mic size={20} />
@@ -47,7 +47,7 @@ export const RecordingControls: React.FC<RecordingControlsProps> = ({
           {isRecording && (
             <button
               onClick={onStop}
-              className="flex items-center space-x-2 bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors shadow-md hover:shadow-lg animate-pulse"
+              className="google-button-danger animate-pulse"
               aria-label="Stop recording"
             >
               <Square size={20} />
@@ -58,7 +58,7 @@ export const RecordingControls: React.FC<RecordingControlsProps> = ({
           {hasRecording && !isRecording && (
             <button
               onClick={onReset}
-              className="flex items-center space-x-2 bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors shadow-md hover:shadow-lg"
+              className="google-button-secondary"
               aria-label="Reset recording"
             >
               <RotateCcw size={20} />
@@ -68,13 +68,13 @@ export const RecordingControls: React.FC<RecordingControlsProps> = ({
         </div>
 
         {isRecording && (
-          <div className="flex items-center space-x-3">
-            <div className="flex space-x-1">
-              <div className="w-2 h-8 bg-red-500 rounded-full animate-pulse" />
-              <div className="w-2 h-8 bg-red-500 rounded-full animate-pulse delay-75" />
-              <div className="w-2 h-8 bg-red-500 rounded-full animate-pulse delay-150" />
+          <div className="flex items-center space-x-google-md">
+            <div className="flex space-x-google-xs">
+              <div className="w-2 h-8 bg-google-red-500 rounded-full animate-pulse" />
+              <div className="w-2 h-8 bg-google-red-500 rounded-full animate-pulse delay-75" />
+              <div className="w-2 h-8 bg-google-red-500 rounded-full animate-pulse delay-150" />
             </div>
-            <span className="text-2xl font-bold text-red-500 tabular-nums">
+            <span className="text-google-display-2 font-google-display text-google-red-500 tabular-nums">
               {recordingTime}
             </span>
           </div>

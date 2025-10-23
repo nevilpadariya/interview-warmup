@@ -19,27 +19,27 @@ export const PrepTimer: React.FC<PrepTimerProps> = ({ onComplete }) => {
   }, [time, isRunning, onComplete]);
 
   return (
-    <div className="bg-yellow-50 border-2 border-yellow-300 rounded-2xl p-6">
+    <div className="bg-google-yellow-50 border-2 border-google-yellow-300 rounded-google-xl p-google-xl">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <Clock className="text-yellow-600" size={24} />
+        <div className="flex items-center space-x-google-md">
+          <Clock className="text-google-yellow-600" size={24} />
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-google-title-1 font-medium text-text-primary">
               Preparation Time
             </h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-google-body-2 text-text-secondary">
               Take a moment to think about your answer
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <span className="text-4xl font-bold text-yellow-600 tabular-nums">
+        <div className="flex items-center space-x-google-md">
+          <span className="text-google-display-1 font-google-display text-google-yellow-600 tabular-nums">
             {formatTime(time)}
           </span>
           {!isRunning && time === 30 && (
             <button
               onClick={start}
-              className="flex items-center space-x-2 bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+              className="google-button-primary bg-google-yellow-500 hover:bg-google-yellow-600"
               aria-label="Start preparation timer"
             >
               <Play size={20} />
@@ -49,10 +49,10 @@ export const PrepTimer: React.FC<PrepTimerProps> = ({ onComplete }) => {
         </div>
       </div>
       {isRunning && (
-        <div className="mt-4">
-          <div className="w-full bg-yellow-200 rounded-full h-2">
+        <div className="mt-google-md">
+          <div className="w-full bg-google-yellow-200 rounded-full h-2">
             <div
-              className="bg-yellow-500 h-2 rounded-full transition-all duration-1000"
+              className="bg-google-yellow-500 h-2 rounded-full transition-all duration-1000"
               style={{ width: `${(time / 30) * 100}%` }}
             />
           </div>
