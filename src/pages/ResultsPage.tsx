@@ -20,13 +20,13 @@ export const ResultsPage = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'general':
-        return 'bg-google-blue-500';
+        return 'bg-blue-500';
       case 'technical':
-        return 'bg-google-green-500';
+        return 'bg-green-500';
       case 'behavioral':
-        return 'bg-google-yellow-500';
+        return 'bg-purple-500';
       default:
-        return 'bg-surface-4';
+        return 'bg-gray-500';
     }
   };
 
@@ -62,21 +62,21 @@ export const ResultsPage = () => {
 
   if (totalQuestions === 0) {
     return (
-      <div className="min-h-screen bg-surface-1">
-        <div className="max-w-4xl mx-auto px-google-md sm:px-google-lg lg:px-google-xl py-google-3xl">
-          <div className="google-card-elevated p-google-3xl text-center">
-            <div className="bg-google-blue-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-google-lg">
-              <BarChart3 className="text-google-blue-500" size={48} />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
+            <div className="bg-blue-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+              <BarChart3 className="text-blue-600" size={48} />
             </div>
-            <h1 className="text-google-headline-1 font-google-display text-text-primary mb-google-md">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">
               No Practice History Yet
             </h1>
-            <p className="text-google-body-1 text-text-secondary mb-google-xl">
+            <p className="text-xl text-gray-600 mb-8">
               Start practicing to see your progress and statistics here!
             </p>
             <button
               onClick={() => navigate('/')}
-              className="google-button-primary"
+              className="inline-flex items-center space-x-2 bg-google-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
             >
               <Home size={20} />
               <span>Go to Home</span>
@@ -88,77 +88,77 @@ export const ResultsPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-surface-1">
-      <div className="max-w-6xl mx-auto px-google-md sm:px-google-lg lg:px-google-xl py-google-3xl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="mb-google-xl">
-          <h1 className="text-google-display-1 font-google-display text-text-primary mb-google-sm">Your Progress</h1>
-          <p className="text-google-body-1 text-text-secondary">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Your Progress</h1>
+          <p className="text-xl text-gray-600">
             Track your interview practice journey
           </p>
         </div>
 
         {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-google-lg mb-google-xl">
-          <div className="google-card-elevated p-google-xl">
-            <div className="flex items-center space-x-google-md">
-              <div className="bg-google-blue-100 rounded-full p-google-md">
-                <Target className="text-google-blue-500" size={28} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-100 rounded-full p-3">
+                <Target className="text-blue-600" size={28} />
               </div>
               <div>
-                <p className="text-google-body-2 text-text-secondary">Total Questions</p>
-                <p className="text-google-display-2 font-google-display text-text-primary">{totalQuestions}</p>
+                <p className="text-sm text-gray-600">Total Questions</p>
+                <p className="text-3xl font-bold text-gray-900">{totalQuestions}</p>
               </div>
             </div>
           </div>
 
-          <div className="google-card-elevated p-google-xl">
-            <div className="flex items-center space-x-google-md">
-              <div className="bg-google-green-100 rounded-full p-google-md">
-                <Clock className="text-google-green-500" size={28} />
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center space-x-4">
+              <div className="bg-green-100 rounded-full p-3">
+                <Clock className="text-green-600" size={28} />
               </div>
               <div>
-                <p className="text-google-body-2 text-text-secondary">Time Practiced</p>
-                <p className="text-google-display-2 font-google-display text-text-primary">{totalMinutes} min</p>
+                <p className="text-sm text-gray-600">Time Practiced</p>
+                <p className="text-3xl font-bold text-gray-900">{totalMinutes} min</p>
               </div>
             </div>
           </div>
 
-          <div className="google-card-elevated p-google-xl">
-            <div className="flex items-center space-x-google-md">
-              <div className="bg-google-yellow-100 rounded-full p-google-md">
-                <BarChart3 className="text-google-yellow-500" size={28} />
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center space-x-4">
+              <div className="bg-purple-100 rounded-full p-3">
+                <BarChart3 className="text-purple-600" size={28} />
               </div>
               <div>
-                <p className="text-google-body-2 text-text-secondary">Current Streak</p>
-                <p className="text-google-display-2 font-google-display text-text-primary">{currentStreak}</p>
+                <p className="text-sm text-gray-600">Current Streak</p>
+                <p className="text-3xl font-bold text-gray-900">{currentStreak}</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Category Breakdown */}
-        <div className="google-card-elevated p-google-xl mb-google-xl">
-          <h2 className="text-google-headline-2 font-google-display text-text-primary mb-google-lg">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Category Breakdown
           </h2>
-          <div className="space-y-google-lg">
+          <div className="space-y-6">
             {Object.entries(categoryStats).map(([category, count]) => {
               const percentage = (count / totalQuestions) * 100;
               return (
                 <div key={category}>
-                  <div className="flex items-center justify-between mb-google-sm">
-                    <div className="flex items-center space-x-google-md">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center space-x-3">
                       <span className="text-2xl">{getCategoryIcon(category)}</span>
-                      <span className="text-google-title-1 font-medium text-text-primary capitalize">
+                      <span className="font-semibold text-gray-900 capitalize">
                         {category}
                       </span>
                     </div>
-                    <span className="text-google-body-2 text-text-secondary">
+                    <span className="text-sm text-gray-600">
                       {count} questions ({percentage.toFixed(1)}%)
                     </span>
                   </div>
-                  <div className="w-full bg-surface-3 rounded-full h-3">
+                  <div className="w-full bg-gray-200 rounded-full h-3">
                     <div
                       className={`${getCategoryColor(category)} h-3 rounded-full transition-all duration-500`}
                       style={{ width: `${percentage}%` }}
@@ -171,24 +171,24 @@ export const ResultsPage = () => {
         </div>
 
         {/* Recent Sessions */}
-        <div className="google-card-elevated p-google-xl mb-google-xl">
-          <h2 className="text-google-headline-2 font-google-display text-text-primary mb-google-lg">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Recent Practice Sessions
           </h2>
-          <div className="space-y-google-md">
+          <div className="space-y-4">
             {practiceHistory.slice(0, 10).map((session, index) => (
               <div
                 key={index}
-                className="flex items-start space-x-google-md p-google-md bg-surface-1 rounded-google-lg hover:bg-surface-2 transition-colors"
+                className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
               >
                 <span className="text-2xl flex-shrink-0">
                   {getCategoryIcon(session.category)}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <p className="text-google-body-1 font-medium text-text-primary mb-google-xs">
+                  <p className="font-medium text-gray-900 mb-1">
                     {session.question}
                   </p>
-                  <div className="flex items-center space-x-google-md text-google-body-2 text-text-secondary">
+                  <div className="flex items-center space-x-4 text-sm text-gray-600">
                     <span className="capitalize">{session.category}</span>
                     <span>•</span>
                     <span>{Math.floor(session.duration / 60)}m {session.duration % 60}s</span>
@@ -205,7 +205,7 @@ export const ResultsPage = () => {
         <div className="flex justify-center">
           <button
             onClick={handleReset}
-            className="google-button-danger"
+            className="flex items-center space-x-2 bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors shadow-md hover:shadow-lg"
           >
             <Trash2 size={20} />
             <span>Reset All Progress</span>
